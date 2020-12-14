@@ -1,6 +1,6 @@
-import todosReducer from './todosSlice'
+import todosReducer from './features/todos/todosSlice'
 
-test(('Toggles a todo based on id') => {
+test('Toggles a todo based on id', () => {
   const initialState = [{ id: 0, text: 'Test text', completed: false }]
 
   const action = { type: 'todos/todoToggled', payload: 0 }
