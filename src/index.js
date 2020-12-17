@@ -1,8 +1,11 @@
-// Omit existing React imports
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
+import App from './App'
 import store from './store'
-
-// Log the initial state
+import './index.css'
+/* // Log the initial state
 console.log('Initial state: ', store.getState())
 // {todos: [....], filters: {status, colors}}
 
@@ -41,6 +44,16 @@ unsubscribe()
 
 // Dispatch one more action to see what happens
 
-store.dispatch({ type: 'todos/todoAdded', payload: 'Try creating a store' })
+store.dispatch({ type: 'todos/todoAdded', payload: 'Try creating a store' }) */
 
 // Omit existing React rendering logic
+ReactDOM.render(
+  // Render a `<Provider>` around the entire `<App>`,
+  // and pass the Redux store to as a prop
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
