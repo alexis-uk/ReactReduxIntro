@@ -13,7 +13,7 @@ const unsubscribe = store.subscribe(() =>
 )
 
 const dispatchResult = store.dispatch({ type: 'some/action' })
-console.log(dispatchResult)
+console.log('Dispatch Results:', dispatchResult)
 // Now, dispatch some actions
 
 store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' })
