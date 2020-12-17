@@ -12,6 +12,13 @@ export default function filtersReducer(state = initialState, action) {
         status: action.payload,
       }
     }
+    case 'filters/colorFilterChanged': {
+      return {
+        ...state,
+        status: action.changeType,
+        colors: [...state.colors, action.color],
+      }
+    }
     default:
       return state
   }

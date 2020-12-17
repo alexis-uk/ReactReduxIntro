@@ -41,8 +41,9 @@ const composedEnhancer = composeWithDevTools(
 // const composedEnhancer = compose(sayHiOnDispatch, includeMeaningOfLife)
 
 //const store = createStore(rootReducer, preloadedState, composedEnhancer)
+const store = createStore(rootReducer, preloadedState)
 
 // Pass enhancer as the second arg, since there's no preloadedState
-const store = createStore(rootReducer, composedEnhancer)
+//const store = createStore(rootReducer, composedEnhancer)
 
 export default store
